@@ -17,7 +17,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
           cache: 'npm'
           cache-dependency-path: savia-frontend/package-lock.json
 
@@ -28,6 +28,28 @@ jobs:
       - name: Build Frontend Production Bundle
         working-directory: ./savia-frontend
         run: npm run build
+
+  agent-service-test:
+    name: AI Agent Service Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Dependencies
+        working-directory: ./savia-agent-service
+        run: |
+          python -m pip install --upgrade pip
+          pip install fastapi uvicorn pydantic requests
+
+      - name: Run Multi-Agent Test Suite
+        working-directory: ./savia-agent-service
+        run: python test_suite.py
 
   backend-build:
     name: Backend Build & Verify
@@ -42,6 +64,10 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
           cache: maven
+
+      - name: Grant Execute Permission to Maven Wrapper
+        working-directory: ./savia-backend
+        run: chmod +x ./mvnw
 
       - name: Build Backend with Maven
         working-directory: ./savia-backend
