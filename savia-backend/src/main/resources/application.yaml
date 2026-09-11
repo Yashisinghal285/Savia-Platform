@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: saarthi-backend
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/saarthi
+    username: saarthi_app
+    password: Yashi_12@
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+
+  flyway:
+    enabled: true
+
+server:
+  port: 8080

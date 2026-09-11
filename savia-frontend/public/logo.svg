@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="saviaPrimaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="40%" stop-color="#2563EB" />
+      <stop offset="100%" stop-color="#1D4ED8" />
+    </linearGradient>
+    <linearGradient id="heartGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F43F5E" />
+      <stop offset="100%" stop-color="#E11D48" />
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#2563EB" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Background Rounded Shield / Tile -->
+  <rect x="6" y="6" width="88" height="88" rx="26" fill="url(#saviaPrimaryGrad)" filter="url(#softGlow)" />
+
+  <!-- Smooth Flowing 'S' Ribbon in Crisp White -->
+  <path d="M68 28 C68 18 56 16 48 16 C34 16 26 24 26 34 C26 48 46 46 62 52 C74 56 78 66 78 74 C78 86 64 88 50 88 C34 88 22 80 22 68" 
+        fill="none" 
+        stroke="#FFFFFF" 
+        stroke-width="9.5" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" />
+
+  <!-- Inner Pediatric Heart Pulse in Warm Coral -->
+  <path d="M50 32 C50 32 54 26 60 26 C66 26 70 30 70 36 C70 43 59 50 50 56 C41 50 30 43 30 36 C30 30 34 26 40 26 C46 26 50 32 50 32 Z" 
+        fill="url(#heartGrad)" 
+        transform="scale(0.32) translate(80, 56)" />
+
+  <!-- Joy & Vitality Golden Starlet -->
+  <circle cx="74" cy="24" r="4" fill="#FDE047" />
+</svg>

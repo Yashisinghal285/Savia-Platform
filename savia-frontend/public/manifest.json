@@ -1,0 +1,19 @@
+{
+  "short_name": "Savia",
+  "name": "Savia - Special Care & Therapy Companion",
+  "description": "A friend. A guide. A support. AAC voice soundboard, calm sensory corner, visual routines, and clinical therapy tracking.",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192 512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#F8F9FE",
+  "theme_color": "#2563EB",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "categories": ["medical", "health", "education", "lifestyle"]
+}

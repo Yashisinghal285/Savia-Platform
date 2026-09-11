@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html.dark, :root.dark {
+    color-scheme: dark;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    @apply bg-[#F8F9FE] text-slate-800 transition-colors duration-150;
+  }
+
+  html.dark body {
+    background-color: #090D16 !important;
+    color: #F8FAFC !important;
+  }
+
+  /* Custom Smooth Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.4);
+    border-radius: 9999px;
+  }
+  .dark ::-webkit-scrollbar-thumb {
+    background: rgba(71, 85, 105, 0.6);
+  }
+}
+
+/* Comprehensive Dark Mode Global Overrides for Sensory Comfort */
+html.dark .bg-white {
+  background-color: #0F172A !important;
+  border-color: #1E293B !important;
+  color: #F8FAFC !important;
+}
+
+html.dark .bg-\[\#F8FAFC\] {
+  background-color: #1E293B !important;
+  border-color: #334155 !important;
+  color: #F8FAFC !important;
+}
+
+html.dark .bg-\[\#F8F9FE\] {
+  background-color: #090D16 !important;
+}
+
+html.dark .bg-\[\#F1F5F9\]\/60 {
+  background-color: rgba(15, 23, 42, 0.95) !important;
+  border-color: #1E293B !important;
+}
+
+html.dark .border-slate-100,
+html.dark .border-slate-200 {
+  border-color: #1E293B !important;
+}
+
+html.dark input,
+html.dark select,
+html.dark textarea {
+  color-scheme: dark;
+}
