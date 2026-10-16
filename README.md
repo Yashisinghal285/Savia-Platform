@@ -199,6 +199,3 @@ Savia generates standardized HL7 FHIR Release 4 JSON Bundles for seamless ingest
 - **Local-First Privacy**: Patient data never leaves the local machine without explicit clinician export.
 
 ---
-
-## 📜 License
-Released under the [MIT License](LICENSE). Built for the **HackerRank Orchestrate 2026** competition.
